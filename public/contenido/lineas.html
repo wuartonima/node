@@ -1,0 +1,229 @@
+<html>
+  <head>
+   
+   <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Network', 68]
+        ]);
+        var data2 = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Network2', 68]
+        ]);
+        var data3 = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Network3', 68]
+        ]);
+        var data4 = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Network4', 68]
+        ]);
+        var data5 = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Network5', 68]
+        ]);
+        var data6 = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Network6', 68]
+        ]);
+
+        var options = {
+          width: 400, height: 120,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+         var chart2 = new google.visualization.Gauge(document.getElementById('chart_div2'));
+          var chart3 = new google.visualization.Gauge(document.getElementById('chart_div3'));
+           var chart4 = new google.visualization.Gauge(document.getElementById('chart_div4'));
+            var chart5 = new google.visualization.Gauge(document.getElementById('chart_div5'));
+             var chart6 = new google.visualization.Gauge(document.getElementById('chart_div6'));
+   
+
+
+        chart.draw(data, options);chart2.draw(data2, options);chart3.draw(data3, options);
+        chart4.draw(data4, options);chart5.draw(data5, options);chart6.draw(data6, options);
+
+
+
+      }
+    </script>
+    
+
+  </head>
+ <body>
+
+<div class="cell auto-size padding10 bg-white" id="cell-content">
+              <h1 class="text-light">linea 1<span class="mif-drive-eta place-center"></span></h1>
+             <table style="width:100%;" >
+  <tr  bgcolor= "#D8D8D8"  >
+    <th><FONT SIZE=5></FONT></th>
+    <th><FONT SIZE=5>Lacer</FONT></th>
+    <th><FONT SIZE=5>Paste</FONT></th>
+    <th><FONT SIZE=5>AOI</FONT></th>
+    <th><FONT SIZE=5>SMD</FONT></th>
+    <th><FONT SIZE=5>Reflow</FONT></th>
+    <th><FONT SIZE=5>AOI</FONT></th>
+
+  </tr>
+  <tr>
+     <th>Condicion </th>
+    <th> <button class="button success" onclick="pushMessage('success')" id=modificarorden><span class="mif-play"></span> Productive Time</button><br></th> 
+    <th><button class="button success" onclick="pushMessage('success')" id=modificarorden><span class="mif-play"></span> Productive Time</button><br></th>
+    <th> <button class="button success" onclick="pushMessage('success')" id=modificarorden><span class="mif-play"></span> Productive Time</button><br></th>
+    <th> <button class="button success" onclick="pushMessage('success')" id=modificarorden><span class="mif-play"></span> Productive Time</button><br></th>
+    <th> <button class="button success" onclick="pushMessage('success')" id=modificarorden><span class="mif-play"></span>Productive Time</button><br></th>
+    <th> <button class="button success" onclick="pushMessage('success')" id=modificarorden><span class="mif-play"></span> Productive Time</button><br></th>
+  </tr>
+  <tr bgcolor= "#D8D8D8" >
+    <th>Utilizacion</th>
+    <th><div id="chart_div" style="width: 100%; height:100%; margin: 0 auto;"></div></th>
+    <th><div id="chart_div2" style="width: 100%; height: 100%;"></div><br></th> 
+    <th><div id="chart_div3" style="width: 100%; height: 100%;"></div><br></th>
+    <th><div id="chart_div4" style="width: 100%; height: 100%;"></div><br></th>
+    <th><div id="chart_div5" style="width: 100%; height: 100%;"></div><br></th>
+    <th><div id="chart_div6" style="width: 100%; height: 100%;"></div><br></th>
+  </tr>
+  <tr>
+    <th>PPM</th>  
+    <th> <FONT SIZE=5>65</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=5>78</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=5>90</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=5>54</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=5>43</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=5>29</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+  </tr>
+   <tr bgcolor= "#D8D8D8" >
+    <th>Rendimiento</th>
+    <th><br>
+  <div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:75%">
+      <div class="w3-center w3-text-white">75%</div>
+    </div>
+  </div><br>
+  </th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:79%">
+      <div class="w3-center w3-text-white">79%</div>
+    </div>
+  </div><br>
+  </th> 
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:83%">
+      <div class="w3-center w3-text-white">83%</div>
+    </div>
+  </div><br>
+  </th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:89%">
+      <div class="w3-center w3-text-white">89%</div>
+    </div>
+  </div><br>
+  </th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:67%">
+      <div class="w3-center w3-text-white">67%</div>
+    </div>
+  </div><br>
+  </th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br>
+  </th>
+  </tr>
+   <tr >
+    <th>Calidad de produccion</th>
+    <th> <FONT SIZE=4>65/100</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>78/100</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>90/100</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>54/100</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>43/100</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>29/100</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+  </tr>
+   <tr bgcolor= "#D8D8D8">
+    <th>Disponivilidad</th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div></div><br></th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th> 
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+  </tr>
+   <tr>
+    <th>Eficiensia</th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+ <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th> 
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+    <th><br><div class="w3-progress-container">
+    <div class="w3-progressbar w3-blue" style="width:81%">
+      <div class="w3-center w3-text-white">81%</div>
+    </div>
+  </div><br></th>
+  </tr>
+   <tr bgcolor= "#D8D8D8" >
+    <th>Comformidad</th>
+     <th> <FONT SIZE=4>OK</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>OK</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>NOK</FONT><FONT SIZE=6><span style=" background-color: red;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>OK</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>OK</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+    <th> <FONT SIZE=4>NOK</FONT><FONT SIZE=6><span style=" background-color: #00ff00;">&nbsp;</span></FONT></th>
+  </tr>
+</table>           
+                </div>
+  </body>
+</html>

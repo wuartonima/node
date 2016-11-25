@@ -1,0 +1,141 @@
+<html>
+  <head>
+   
+   <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Disponibilidad', 'Velocidad','Calidad'],
+          ['2013',  1000,             400,        210],
+          ['2014',  1170,             460,        210],
+          ['2015',  660,              1120,       310],
+          ['2016',  1030,             540,        410]
+        ]);
+
+        var options = {
+          title: 'linea1',
+          legend: {position: 'top', maxLines: 3},
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+        options.title='linea2'
+        var chart2 = new google.visualization.AreaChart(document.getElementById('chart_div2'));
+        data = google.visualization.arrayToDataTable([
+          ['Year', 'Disponibilidad', 'Velocidad','Calidad'],
+          ['2013',  780,             800,        90],
+          ['2014',  970,             360,        610],
+          ['2015',  560,             900,       210],
+          ['2016',  450,             640,        510]
+        ]);
+        chart2.draw(data, options);
+        options.title='linea3'
+        var chart3 = new google.visualization.AreaChart(document.getElementById('chart_div3'));
+        data = google.visualization.arrayToDataTable([
+          ['Year', 'Disponibilidad', 'Velocidad','Calidad'],
+          ['2013',  879,             400,        310],
+          ['2014',  990,             700,        110],
+          ['2015',  210,             200,        90],
+          ['2016',  1000,            540,        410]
+        ]);
+        chart3.draw(data, options);
+        options.title='linea4'
+        var chart4 = new google.visualization.AreaChart(document.getElementById('chart_div4'));
+        data = google.visualization.arrayToDataTable([
+          ['Year', 'Disponibilidad', 'Velocidad','Calidad'],
+          ['2013',  1000,             300,       110],
+          ['2014',  1170,             60,        210],
+          ['2015',  660,              700,       310],
+          ['2016',  1030,             540,        410]
+        ]);
+        chart4.draw(data, options);
+      }
+      </script>
+      </head>
+<body>
+<div class="tile" style="width: 47%; height:47%;">
+    <div class="tile-content slide-up-2" style="width: 100%; height:100%;">
+        <div class="slide">
+           <img src="../images/p1.jpg" border="0" width="100%" height="100%">
+        </div>
+        <div class="slide-over" style="background: #fff">
+           <div id="chart_div" style="width: 80%; height: 80%; float: left;"></div>          
+           <button class="button primary" id=masLinea1 style="float: right;"><span class="mif-plus"></span> Mas</button>
+           <br><br><br><br><br><br>
+           <div align="left" style="float: right;"><span class="w3-tag w3-large w3-blue">OEE:0.66</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-amber">Disponibilidad:0.8</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-light-green">Velocidad:0.89</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-pale-blue">Calidad:0.77</span></div>
+         
+        </div>
+    </div>
+</div>
+<div class="tile" style="width: 47%; height:47%;">
+    <div class="tile-content slide-up-2" style="width: 100%; height:100%;">
+        <div class="slide">
+           <img src="../images/p5.jpg" border="0" width="100%" height="100%">
+        </div>
+        <div class="slide-over" style="background: #fff">
+           <div id="chart_div2" style="width: 80%; height: 80%; float: left;"></div>
+           <button class="button primary" id=masLinea2 style="float: right;"><span class="mif-plus"></span> Mas</button>
+           <br><br><br><br><br><br>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-blue">OEE:0.66</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-amber">Disponibilidad:0.8</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-light-green">Velocidad:0.89</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-pale-blue">Calidad:0.77</span></div>         
+        </div>
+    </div>
+</div>
+<div class="tile" style="width: 47%; height:47%;">
+    <div class="tile-content slide-up-2" style="width: 100%; height:100%;">
+        <div class="slide">
+           <img src="../images/p6.jpg" border="0" width="100%" height="100%">
+        </div>
+        <div class="slide-over" style="background: #fff">
+           <div id="chart_div3" style="width: 80%; height: 80%; float: left;"></div>
+           <button class="button primary" id=masLinea3 style="float: right;"><span class="mif-plus"></span> Mas</button>
+           <br><br><br><br><br><br>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-blue">OEE:0.66</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-amber">Disponibilidad:0.8</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-light-green">Velocidad:0.89</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-pale-blue">Calidad:0.77</span></div>
+         
+        </div>
+    </div>
+</div>
+
+<div class="tile" style="width: 47%; height:47%;">
+    <div class="tile-content slide-up-2" style="width: 100%; height:100%;">
+        <div class="slide">
+           <img src="../images/p4.jpg" border="0" width="100%" height="100%">
+        </div>
+        <div class="slide-over" style="background: #fff">
+           <div id="chart_div4" style="width: 80%; height: 80%; float: left;"></div>
+           <button class="button primary" id=masLinea4  style="float: right;"><span class="mif-plus"></span> Mas</button>
+           <br><br><br><br><br><br>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-blue">OEE:0.66</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-amber">Disponibilidad:0.8</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-light-green">Velocidad:0.89</span></div>
+           <div align="left" style="float: left;"><span > &nbsp&nbsp</span></div>
+           <div align="left" style="float: left;"><span class="w3-tag w3-large w3-pale-blue">Calidad:0.77</span></div>
+         
+        </div>
+    </div>
+</div>
+</body>
+</html>

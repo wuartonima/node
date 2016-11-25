@@ -1,0 +1,30 @@
+<div class="cell auto-size padding20 bg-white" id="cell-content">
+                    <h1 class="text-light">Ordenes de produccion<span class="mif-drive-eta place-right"></span></h1>
+                    <hr class="thin bg-grayLighter">
+                    <button class="button primary" onclick="popadd('#popcreate')" id=crearorden><span class="mif-plus"></span> Crear</button>
+                    <button class="button success" onclick="popadd('#popmodificar')" id=modificarorden><span class="mif-play"></span> Modificar</button>
+                    <button class="button warning" onclick="popadd('#popeliminar')" id=eliminarorden><span class="mif-loop2"></span> Eliminar</button>
+                     <button class="button warning" onclick="popadd('#popconcluir')" id=conluirorden><span class="mif-loop2"></span>Concluir </button>
+
+                    <button class="button primary" onclick="pushMessage('alert')">Actualizar</button>
+                    <hr class="thin bg-grayLighter">
+                    <table class="dataTable" data-role="datatable">
+                           <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>orden</th>
+                                  <th>N° Piezas</th>
+                                  <th>Lote</th>
+                                  <th>SKU</th>
+                                  <th>Fecha</th>
+                                  <th>Estatus</th>
+                                </tr>
+                          </thead>
+                            <tbody id=odenes>
+                          
+                        </tbody>
+                      
+                    </table>
+                  
+                   
+                </div>

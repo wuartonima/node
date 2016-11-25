@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="wizard2" data-role="wizard2" style=" height: 100%">
+    <div class="step" style="height: 90%">
+        <div class="step-content">
+            
+            <h1 class="text-light">Seleccione el tipo de reporte3<span class="mif-drive-eta place-right"></span></h1>
+
+            <div style="float: left;" onclick="selection('#reporteProduc','#reporteFallos','#reporteEficiencia')" id=op1 >
+         
+            <img src="../images/produccu.jpg"  style="width: 25%; float: left;" id=reporteProduc>
+            <h2 class="text-light">Reporte De Produccion</h2>
+            <p>Genera reporte de piezas producidas por linea en intervalo de fechas selecionados por el usuario o administrador y brinda la posibilidad de exportar el reporte a formato PDF .</p>  
+                       
+            </div>
+            
+             <div style="float: left;" onclick="selection('#reporteFallos','#reporteEficiencia','#reporteProduc')" id=op2 >
+             <br>
+             <img src="../images/eficiencia.jpg"  style="width: 25%; float: left;" id=reporteFallos >
+            <h2 class="text-light">Reporte De Eficiencia</h2>
+            <p>Genera reporte de historial de eficiencia por linea en intervalo de fechas selecionados por el usuario o administrador y brinda la posibilidad de exportar el reporte a formato PDF .</p> 
+            </div>
+
+            <div style=" float: left;" onclick="selection('#reporteEficiencia','#reporteFallos','#reporteProduc')" id=op3 >
+            <br>
+            <img src="../images/fallos.jpg"  style="width: 25%; float:left;" id=reporteEficiencia>
+            <h2 class="text-light">Reporte De Fallos</h2>
+            <p>Genera reporte de historial de eficiencia por linea en intervalo de fechas selecionados por el usuario o administrador y brinda la posibilidad de exportar el reporte a formato PDF .</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="step" style="height: 90%">
+        <div class="step-content"> 
+        <h1 class="text-light">Selecione el intervalo de fechas</h1>
+        <hr class="thin"/>  
+        <h4 class="text-light">Inicio:</h4>      
+        <div class="input-control text" data-role="datepicker" id=fela>       
+        <input type="text" id=fecha1>
+        <button class="button"><span class="mif-calendar"></span></button>
+        </div>
+        <h4 class="text-light">Fin:</h4>
+        <div class="input-control text" data-role="datepicker">
+        <input type="text" id=fecha2>
+        <button class="button"><span class="mif-calendar"></span></button>
+        </div>
+        <br>       
+        <h1 class="text-light">Selecione la linea</h1>
+        <hr class="thin"/>
+        <label class="input-control radio">
+        <input type="radio" name="n1" checked value="1" class="op">
+        <span class="check"></span>
+        <span class="caption">Linea 1</span>
+        </label>
+        <br>
+         <label class="input-control radio">
+        <input type="radio" name="n1" checked value="2" class="op">
+        <span class="check"></span>
+        <span class="caption">Linea 2</span>
+        </label>
+        <br>
+         <label class="input-control radio">
+        <input type="radio" name="n1" checked value="3" class="op">
+        <span class="check"></span>
+        <span class="caption">Linea 3</span>
+        </label>
+        <br>
+         <label class="input-control radio">
+        <input type="radio" name="n1" checked value="4" class="op">
+        <span class="check"></span>
+        <span class="caption">Linea 4</span>
+        </label>
+        <br>
+            <br>        	
+        </div>
+    </div>
+     <div class="step" style="height: 90%">
+        <div class="step-content" >
+         <button class="button primary" onclick="dureport()" id=crearorden><span class="mif-plus"></span> Generar Reporte</button>
+
+         <button class="button primary" onclick="tableToExcel('exel','exel2','Table')" id=0><span class="mif-plus"></span> Migrar excel</button>
+         <button class="button primary" onclick="pdfcreated()" id=0><span class="mif-plus"></span> Migrar pdf</button>
+       
+
+         <div id=reporte  >
+         	
+         </div>
+         <div id='pdf' style='display:none'></div>
+
+<!--"tableToExcel('exel','exel2', 'W3C Example Table')"-->
+
+
+
+
+        	
+        </div>
+    </div>
+</div>
+</body>
+</html>
