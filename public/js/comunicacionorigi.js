@@ -7,8 +7,4 @@ socket.on('messages', function(data) {
 function pedirdatos(){
 	
 
-
-
-
-
 }

@@ -18,16 +18,16 @@
                        
             </div>
             
-             <div style="float: left;" onclick="selection('#reporteFallos','#reporteEficiencia','#reporteProduc')" id=op2 >
+             <div style="float: left;" onclick="selection('#reporteEficiencia','#reporteFallos','#reporteProduc')" id=op2 >
              <br>
-             <img src="../images/eficiencia.jpg"  style="width: 25%; float: left;" id=reporteFallos >
+             <img src="../images/eficiencia.jpg"  style="width: 25%; float: left;" id=reporteEficiencia >
             <h2 class="text-light">Reporte De Eficiencia</h2>
             <p>Genera reporte de historial de eficiencia por linea en intervalo de fechas selecionados por el usuario o administrador y brinda la posibilidad de exportar el reporte a formato PDF .</p> 
             </div>
 
-            <div style=" float: left;" onclick="selection('#reporteEficiencia','#reporteFallos','#reporteProduc')" id=op3 >
+            <div style=" float: left;" onclick="selection('#reporteFallos','#reporteEficiencia','#reporteProduc')" id=op3 >
             <br>
-            <img src="../images/fallos.jpg"  style="width: 25%; float:left;" id=reporteEficiencia>
+            <img src="../images/fallos.jpg"  style="width: 25%; float:left;" id=reporteFallos>
             <h2 class="text-light">Reporte De Fallos</h2>
             <p>Genera reporte de historial de eficiencia por linea en intervalo de fechas selecionados por el usuario o administrador y brinda la posibilidad de exportar el reporte a formato PDF .</p>
             </div>
@@ -82,8 +82,8 @@
         <div class="step-content" >
          <button class="button primary" onclick="dureport()" id=crearorden><span class="mif-plus"></span> Generar Reporte</button>
 
-         <button class="button primary" onclick="tableToExcel('exel','exel2','Table')" id=0><span class="mif-plus"></span> Migrar excel</button>
-         <button class="button primary" onclick="pdfcreated()" id=0><span class="mif-plus"></span> Migrar pdf</button>
+         <button class="button primary" onclick="tableToExcel('exel','exel2','Table')" id=mexel><span class="mif-plus"></span> Migrar excel</button>
+         <button class="button primary" onclick="pdfcreated()" id=mpdf ><span class="mif-plus" ></span> Migrar pdf</button>
        
 
          <div id=reporte  >
