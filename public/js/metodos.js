@@ -26,12 +26,11 @@
       $('#reporte').load('contenido/reporteproduccion.html', function() {
         var d, f, i;
         $("#mpdf").css("display", "none");
-        $("#mexel").css("display", "block");
         d = Date.parse("2016.11.10", "y.m.d");
         i = 0;
         while (i <= 30) {
           f = genda(reporte.fecha1(), reporte.fecha2());
-          $('#piezasgood').append('<tr><td>' + 'ID_' + i + '</td><td>' + 'Orden' + i + '</td><td>' + (i + 31) + '</td><td>' + 'Lote' + i + '</td><td>' + 'SKU' + i + '</td><td>' + f + '</td><td>' + 'OK');
+          $('#piezasgood').append('<tr><td>' + 'ID_' + i + '</td><td>' + 'Orden ' + i + '</td><td>' + (i + 31) + '</td><td>' + 'Lote' + i + '</td><td>' + 'SKU' + i + '</td><td>' + f + '</td><td>' + 'OK');
           +'</td></tr>';
           f = genda(reporte.fecha1(), reporte.fecha2());
           $('#piezasbad').append('<tr><td>' + 'ID_' + (i + 87) + '</td><td>' + 'Orden-' + i + '</td><td>' + (i + 41) + '</td><td>' + 'Lote-' + i + '</td><td>' + 'SKU-' + i + '</td><td>' + f + '</td><td>' + 'OK');
@@ -39,36 +38,40 @@
           i++;
         }
         i = 0;
-        while (i <= 6) {
-          $('#piezasgood').append('<tr><td>' + '' + '</td><td>');
-          +'' + '</td><td>' + '' + '</td><td>';
-          +'' + '</td><td>' + '' + '</td><td>' + '' + '</td></tr>';
-          $('#piezasbad').append('<tr><td>' + '' + '</td><td>' + '' + '</td><td>' + '' + '</td><td>' + '' + '</td><td>' + '' + '</td><td>' + '' + '</td></tr>');
-          i++;
-        }
+
+        $("table").tableExport({
+             bootstrap: true, 
+             formats: ["xlsx", "csv", "txt"],
+             position: "top"
+             });
       });
     },
     'reporteFallos': function() {
       $('#reporte').load('contenido/reportefallos.html', function() {
         var E, Error, f, i, l;
         $("#mpdf").css("display", "none");
-        $("#mexel").css("display", "block");
         i = 0;
         while (i <= 30) {
           l = Math.floor((Math.random() * 4) + 1);
           Error = Math.floor((Math.random() * 100) + 1);
           E = Math.floor((Math.random() * 22) + 1);
           f = genda(reporte.fecha1(), reporte.fecha2());
-          $('#fallos').append('<tr><td>' + 'ID_' + i + '</td><td>' + 'Error' + Error + '</td><td>' + 'Estacion' + l + '</td><td>' + E + ':' + (E + 3) + ':' + (E + 8) + '</td><td>' + f + '</td><td>' + (Error + 13) + " minutos" + '</td><td>' + 'OK' + '</td></tr>');
+          $('#fallos').append('<tr><td>' + 'ID_' + i.toString() + '</td><td>' + 'Error' + Error.toString() + '</td><td>' + 'Estacion' + l.toString() + '</td><td>' + E.toString() + ':' + (E + 3).toString() + ':' + (E + 8).toString() + '</td><td>' + f + '</td><td>' + (Error + 13).toString() + " minutos" + '</td><td>' + 'OK ' + '</td></tr>');
           i++;
         }
+         $("table").tableExport({
+             bootstrap: true, 
+             formats: ["xlsx", "csv", "txt"],
+             position: "top"
+             });
       });
+       
+      
     },
     'reporteEficiencia': function() {
       $('#reporte').load('contenido/eficienciareporte.html', function() {
         var arr;
         $("#mpdf").css("display", "block");
-        $("#mexel").css("display", "none");
         arr = [['Year', 'Disponibilidad'], ['2013', 780], ['2014', 970], ['2015', 560], ['2016', 450]];
         graficar('polo', arr, 'Disponibilidada');
         arr = [['Year', 'Velocidad'], ['2013', 400], ['2014', 700], ['2015', 200], ['2016', 540]];
@@ -226,7 +229,11 @@
   };
 
   this.cargarcontenido = function(archivo) {
-    $('#contenido').load('contenido/' + archivo);
+    $('#contenido').load('contenido/' + archivo, function(){
+      
+
+
+    });
   };
 
   this.popadd = function(menu) {

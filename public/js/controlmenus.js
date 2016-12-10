@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+ 
     console.log( "ready!" );
     $("#contenido").load("contenido/p.html")
     /////// seccion correspondiente a menus emergentes
@@ -7,7 +8,7 @@ $( document ).ready(function() {
         var arr=[['Year', 'Disponibilidad'], ['2013',  1000],['2014',  1170],['2015',  660],['2016',  1030]];
         graficar('polo',arr,'Disponibilidada',1);
         arr=[['Year', 'Velocidad'], ['2013',  400],['2014',  460],['2015',  1120],['2016',  540]];
-        graficar('polo2',arr,'Velocidad',1);
+        graficar('polo2 ',arr,'Velocidad',1);
         arr=[['Year', 'Calidad'], ['2013',  210],['2014',  210],['2015',  310],['2016',  410]];
         graficar('polo3',arr,'Calidad',1);
          });
