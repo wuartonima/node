@@ -1,0 +1,72 @@
+ <html>
+     <head>
+         <script>
+             getorden("#lotesel","#skusel","#lineasel");///add Autocomplete
+         </script>
+
+     </head>
+     <body>   
+         
+  <form action=""  onsubmit="return addfila('#creat',insertFile)" id=creat>
+        <h1 class="text-light">Nueva orden</h1>
+        <hr class="thin"/>
+        <br />
+        <div style="width: 49%; float:left">
+         
+           
+        <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Orden:</label>          
+                <input type="text" name="orden">
+        </div>
+        <br />
+        <br />
+        <div class="input-control text full-size" data-role="input">
+                <label for="user_login">N° piezas:</label>
+                <input type="number" name="numero piezas">
+        </div>
+        <br />
+        <br />
+        <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Lote:</label>
+                ​<select id=lotesel form="creat" name="lote" ></select>
+        </div>
+        <br />
+        <br />
+
+      <div class="input-control text full-size" data-role="input">
+                <label for="user_login">SKU:</label>
+                <select id=skusel form="creat" name="sku"></select>
+         </div>
+         <br />
+         <br />
+</div> 
+
+     <div style="width: 49%; float:right">
+         <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Fecha:</label>
+                <input type="date" name="fecha">
+         </div>
+         <br />
+         <br />
+         <div class="input-control text full-size" data-role="input">
+                <label for="user_login">LINEA:</label>
+                <select id=lineasel  form="creat" name="linea"></select>
+         </div>
+         <br />
+         <br />
+         <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Estatus:</label>
+                <input type="number" name="estatus">
+         </div>
+         <br />
+         <br />
+    </div>
+    <br />
+    <br />
+   <div style="float:left;width: 53%">
+        <button type="submit">AÑADIR.</button>
+   </div> 
+               
+</form>
+        </body>
+        </html>

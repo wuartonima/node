@@ -1,0 +1,74 @@
+ <html>
+     <head>
+         <script>
+              getorden("#mlotesel","#mskusel","#mlineasel");           
+         </script>
+     </head>
+         <body>
+             <form action=""  onsubmit="return addfila('#modificar',modificarF)" id=modificar>
+             <h1 class="text-light">Modificar orden</h1>
+            <hr class="thin"/>
+            <br />
+        <div style="width: 48%; float:left;margin-right:3%;">
+            <div class="input-control text full-size" data-role="input">
+                <label for="user_login">ID:</label>
+                <input type="number" name="ID">
+            </div>
+            <br />
+            <br />
+         
+         <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Orden:</label>
+                <input type="text" name="orden">
+            </div>
+            <br />
+            <br />
+        <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Numero de piezas:</label>
+                ​<input type="number" name="nopiezas">
+         </div>
+         <br />
+         <br />
+         <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Lote:</label>
+                ​<select id=mlotesel name="lote"></select>
+         </div>
+         <br />
+         <br />
+    </div>
+    <div style="width: 48%; float:left">
+      <div class="input-control text full-size" data-role="input">
+                <label for="user_login">SKU:</label>
+                <select id=mskusel name="sku"></select>
+         </div>
+         <br />
+         <br />
+ 
+     <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Fecha:</label>
+                <input type="date" name="fecha">
+         </div>
+         <br />
+         <br />
+    <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Linea:</label>
+                <select id=mlineasel name=linea></select>
+         </div>
+         <br />
+         <br />
+    <div class="input-control text full-size" data-role="input">
+                <label for="user_login">Estatus:</label>
+                <input type="number" name="fecha">
+         </div>
+         <br />
+         <br />
+        
+    </div> 
+ <div style="float:left;width: 53%">
+        <button type="submit">MODIFICAR.</button>
+   </div> 
+       </form>
+             
+         </body>
+ </html>
+  

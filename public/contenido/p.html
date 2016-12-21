@@ -1,14 +1,15 @@
 <div class="cell auto-size padding20 bg-white" id="cell-content">
                     <h1 class="text-light">Ordenes de produccion<span class="mif-drive-eta place-right"></span></h1>
                     <hr class="thin bg-grayLighter">
-                    <button class="button primary" onclick="popadd('#popcreate')" id=crearorden><span class="mif-plus"></span> Crear</button>
-                    <button class="button success" onclick="popadd('#popmodificar')" id=modificarorden><span class="mif-play"></span> Modificar</button>
-                    <button class="button warning" onclick="popadd('#popeliminar')" id=eliminarorden><span class="mif-loop2"></span> Eliminar</button>
-                     <button class="button warning" onclick="popadd('#popconcluir')" id=conluirorden><span class="mif-loop2"></span>Concluir </button>
+                    <button class="button primary" onclick="popadd('#popcreate','popcrear.html')" id=crearorden><span class="mif-plus"></span> Crear</button>
+                    <button class="button success" onclick="popadd('#popmodificar','popmodificar.html')" id=modificarorden><span class="mif-play"></span> Modificar</button>
+                    <button class="button warning" onclick="popadd('#popeliminar','popeliminar.html')" id=eliminarorden><span class="mif-loop2"></span> Eliminar</button>
+                     <button class="button warning" onclick="popadd('#popconcluir','popconcluir.html')" id=conluirorden><span class="mif-loop2"></span>Concluir </button>
 
                     <button class="button primary" onclick="pushMessage('alert')">Actualizar</button>
                     <hr class="thin bg-grayLighter">
-                    <table class="dataTable" data-role="datatable">
+                    
+                    <table   id="ordenespro">
                            <thead>
                                 <tr>
                                   <th>ID</th>
@@ -17,44 +18,10 @@
                                   <th>Lote</th>
                                   <th>SKU</th>
                                   <th>Fecha</th>
-                                  <th>Estatus</th>
                                   <th>Linea</th>
+                                  <th>Estatus</th>
                                 </tr>
-                          </thead>
-                            <tbody id=odenes>
-                                <tr>
-                               <td>3320</td>
-                               <td>OSJFKS</td>
-                               <td>56</td>
-                               <td>12MAR2016CCM</td>
-                               <td>MMABKMTK</td>
-                               <td>12/MAR/2016</td>
-                               <td>21</td>
-                               <td>2</td>
-                            </tr>
-                           <tr>
-                              <td>5300</td>
-                              <td>JGHGFR</td>
-                              <td>49</td>
-                              <td>05MAY2016KKL</td>
-                              <td>BKMMATKM</td>
-                              <td>05/MAY/2016</td>
-                              <td>19</td>
-                              <td>1</td>
-                           </tr>
-                            <tr>
-                               <td>1100</td>
-                               <td>VYGGVH</td>
-                               <td>89</td>
-                               <td>07DIC2016MMC</td>
-                               <td>KAMBTKMM</td>
-                               <td>07/DIC/2016</td>
-                               <td>45</td>
-                               <td>2</td>              
-                           </tr>
-                          
-                        </tbody>
-                      
+                          </thead>                    
                     </table>
                   
                    
