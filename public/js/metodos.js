@@ -114,7 +114,7 @@
       array.forEach(function(element,index){ 
         
       $(id).append('<option value='+element[propiedad]+'>'+element[propiedad] +'</option>'); 
-      console.log(element[propiedad]);  
+ 
       });
   }  
   this.getorden= function(id1,id2,id3){ 
@@ -215,10 +215,10 @@
     socket.emit("addOrden","INSERT INTO ordenes VALUES (DEFAULT"+arr+")");
   };
   this.modificarF=function(arr,l){ 
-   //var consulta="UPDATE ordenes SET orden="+l[1].value+", numero="+l[2].value+", lote="+l[3].value+", sku="+l[4].value+
-   //", fecha="+l[5].value+", linea="+l[6].value+", estatus="+1[7].value+" WHERE `id`="+l[8].value+";";
- console.log(l);
- //socket.emit("addOrden",consulta);
+   var consulta="UPDATE ordenes SET orden='"+l[1].value+"', numero='"+l[2].value+"', lote='"+l[3].value+"', sku='"+l[4].value+
+   "', fecha='"+l[5].value+"', linea='"+l[6].value+"', estatus='"+l[7].value+"' WHERE `id`='"+l[0].value+"';";
+
+ socket.emit("addOrden",consulta);
   }
 
   this.addfila = function(form,caso) {
@@ -238,13 +238,17 @@
   this.pdfcreated = function() {
     var imgData;
     imgData = $('#pdf img');
-    doc.text(20, 20, 'Reporte de eficiencia generado por Rsoft');
-    doc.addImage(imgData[0], 'png', 20, 40, 600, 300);
-    doc.addImage(imgData[1], 'png', 20, 430, 600, 300);
+    var imgData2 = $('#logo img');
+  //  doc.text(20, 20, 'Reporte de eficiencia generado por Rsoft');
+    doc.addImage(imgData2[0], 'png', 20, 10, 60, 60);
+    doc.text(90, 15, 'Reporte de eficiencia generado por Rsoft');
+    doc.addImage(imgData[0], 'png', 20, 80, 600, 300);
+    doc.addImage(imgData[1], 'png', 20, 470, 600, 300);
     doc.addPage();
-    doc.addImage(imgData[2], 'png', 15, 40, 600, 300);
+    doc.addImage(imgData[2], 'png', 15, 80, 600, 300);
     $('#pdf').empty();
     doc.save('sample-file.pdf');
+    doc = new jsPDF('p', 'pt', 'a4', false);
   };
 
   this.cargarcontenido = function(archivo,tabla) {

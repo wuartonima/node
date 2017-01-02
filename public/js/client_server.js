@@ -6,7 +6,6 @@
     data.forEach(function(element,index) {
       element[namerow]=element[namerow].substring(0, 10);
     });
-    console.log(data);
   }
 
   socket.on('messages', function(data) {
