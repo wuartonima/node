@@ -220,6 +220,10 @@
 
  socket.emit("addOrden",consulta);
   }
+  this.eliminar=function(arr,l){ 
+    var consulta="DELETE FROM ordenes WHERE  `id`="+l[0].value;
+    socket.emit("addOrden",consulta);
+  }
 
   this.addfila = function(form,caso) {
     var arr, fd, i;
