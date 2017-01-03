@@ -74,6 +74,12 @@ module.exports = function(app, passport,io) {
 		req.logout();
 		res.redirect('/');
 	});
+app.get('/favicon.ico', function(req, res) {
+	
+	});
+
+
+
 };
 
 // route middleware to make sure
