@@ -14,6 +14,18 @@
       return true;
     }
   };
+  this.ancho_pantalla=function(){
+    if (navigator.appName.indexOf('Explorer') != -1)
+        return document.body.parentNode.scrollWidth;
+    else
+        return window.innerWidth;
+  };
+  this.alto_pantalla=function (){
+    if (navigator.appName.indexOf('Explorer') != -1)
+        return document.body.parentNode.scrollHeight;
+    else
+        return window.innerHeight;
+  };
 
   this.genda = function(fecha1, fecha2) {
     var date, dd, f1, f2, m, n;
