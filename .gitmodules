@@ -1,0 +1,3 @@
+[submodule "opc_ua"]
+	path = opc_ua
+	url = https://github.com/wuartonima/opc_ua.git
